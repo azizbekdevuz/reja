@@ -26,8 +26,8 @@ app.get("/hello", function(req, res) {
 app.get("/gift", function(req, res) {
     res.end(`You are now on the gifts page`);
 });
-app.get("/buy", (req, res) => {
-    res.render("buy");
+app.get("/harid", (req, res) => {
+    res.render("harid");
 });
 app.post("/create-item", (req, res) => {
     console.log(req.body);

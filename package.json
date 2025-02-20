@@ -12,6 +12,7 @@
   "author": "azizbek LEO",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^3.1.10",
     "express": "^4.21.2",
     "http": "^0.0.1-security"
   },
