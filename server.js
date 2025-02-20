@@ -3,6 +3,7 @@ console.log("Web server started");
 const express = require("express");
 const http = require("http");
 const app = express();
+const res = require("express/lib/response");
 
 // 1. Entrance
 app.use(express.static("public"));
@@ -16,11 +17,21 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 // 4. Routing
+app.get("/", function(req, res) {
+    res.end("Hello Word");
+});
 app.get("/hello", function(req, res) {
-    res.end("Hello Word to yio");
+    res.end("Hello Word from /hello page");
 });
 app.get("/gift", function(req, res) {
     res.end(`You are now on the gifts page`);
+});
+app.get("/buy", (req, res) => {
+    res.render("buy");
+});
+app.post("/create-item", (req, res) => {
+    console.log(req.body);
+    res.json({ test: "success" });
 });
 
 const server = http.createServer(app);
