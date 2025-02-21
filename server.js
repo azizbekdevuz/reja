@@ -3,7 +3,18 @@ console.log("Web server started");
 const express = require("express");
 const http = require("http");
 const app = express();
-const res = require("express/lib/response");
+const fs = require("fs");
+
+let user;
+fs.readFile("database/user.json", "utf8", (err, data) => {
+    if(err) {
+        console.log("ERROR:", err);
+    } else {
+        user = JSON.parse(data);
+    }
+});
+
+// const res = require("express/lib/response");
 
 // 1. Entrance
 app.use(express.static("public"));
@@ -32,6 +43,17 @@ app.get("/harid", (req, res) => {
 app.post("/create-item", (req, res) => {
     console.log(req.body);
     res.json({ test: "success" });
+});
+
+let visitCount = 0;
+
+app.get("/counter", function (req, res) {
+    visitCount++;
+    res.end(`This page has been visited ${visitCount} times.`);
+});
+
+app.get('/author', (req, res) => {
+    res.render("author", { user: user });
 });
 
 const server = http.createServer(app);
