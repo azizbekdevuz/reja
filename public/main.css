@@ -1,3 +1,5 @@
+/* AZIZBEK [LEO] | MIT25 */
+
 .frame {
     width: 100%;
     height: 100%;
@@ -349,9 +351,9 @@
 .mid_frame_content {
     position: relative;
     width: 100%;
-    height: auto; /* Changed from 100% to auto to accommodate all content */
-    padding: 20px 20px 40px; /* Added bottom padding to ensure visibility */
-    overflow: visible; /* Changed from hidden to visible */
+    height: auto; 
+    padding: 20px 20px 40px; 
+    overflow: visible; 
 }
 
 /* Decorative Elements */
@@ -443,7 +445,7 @@
 }
 
 .hero_text {
-    width: 55%; /* Slightly reduced to give more space for the image */
+    width: 55%; 
 }
 
 .hero_title {
@@ -494,23 +496,23 @@
 }
 
 .hero_image {
-    width: 45%; /* Increased width to accommodate the full image */
+    width: 45%; 
     display: flex;
-    justify-content: center; /* Changed from flex-end to center */
+    justify-content: center; 
     align-items: center;
-    padding-right: 30px; /* Added padding to ensure image isn't cut off */
+    padding-right: 30px; 
 }
 
 .profile_large {
     width: 325px;
     height: auto;
-    max-width: 100%; /* Ensure image doesn't overflow its container */
+    max-width: 100%; 
 }
 
 /* My Services Section */
 .my_services {
     position: relative;
-    margin-top: 50px; /* Reduced from 150px to 50px */
+    margin-top: 50px; 
     padding: 0 20px;
     z-index: 1;
 }
@@ -538,7 +540,7 @@
 .services_grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px; /* Increased from 2px to 20px for better spacing */
+    gap: 20px; 
     margin-top: 40px;
 }
 
@@ -551,7 +553,7 @@
     text-align: center;
     transition: all 0.3s ease;
     border: 1px solid #F0F0F6;
-    height: 200px; /* Reduced from 225px to 200px */
+    height: 200px; 
 }
 
 .service_card:hover {
@@ -563,7 +565,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px; /* Reduced from 25px to 20px */
+    margin-bottom: 20px; 
 }
 
 .service_icon {
@@ -591,19 +593,19 @@
 /* Advertising Card Special Styling */
 .advertising_card {
     text-align: left;
-    padding: 30px 20px; /* Adjusted from 40px 30px to match other cards */
+    padding: 30px 20px; 
 }
 
 .advertising_card .service_name {
     text-align: left;
     margin-top: 0;
-    margin-bottom: 15px; /* Reduced from 20px to 15px */
+    margin-bottom: 15px; 
 }
 
 .advertising_card .service_details {
     text-align: left;
     line-height: 1.7;
-    margin-bottom: 15px; /* Reduced from 20px to 15px */
+    margin-bottom: 15px;
 }
 
 .order_now_btn {
@@ -630,7 +632,7 @@ MID_FRAME STYLES -->
 .main_frame .right_frame {
     position: relative;
     width: 108px;
-    height: 1400px; /* Updated to match the height of left_frame */
+    height: 1400px; 
     display: flex;
     flex-direction: column;
     align-items: center;
