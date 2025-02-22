@@ -1,0 +1,741 @@
+.frame {
+    width: 100%;
+    height: 100%;
+    background: #cdcaca;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.frame .main_frame {
+    position: relative;
+    width: 1440px;
+    height: 1415px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2px;
+}
+
+.main_frame .left_frame {
+    position: relative;
+    width: 305px;
+    height: 1400px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* .main_frame .mid_frame {
+    position: relative;
+    width: 970px;
+    height: 1259px;
+    margin-left: 30px;
+    margin-right: 27px;
+    display: flex;
+    flex-direction: column;
+} */
+
+.main_frame .right_frame {
+    position: relative;
+    width: 108px;
+    height: 1315px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.main_frame .left1 {
+    position: relative;
+    width: 228px;
+    height: 267px;
+    margin-top: 50px;
+    margin-left: 37px;
+    margin-bottom: 25px;;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_frame .left1 .left1-1 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 156.16px;
+    height: 142.53px;
+    margin-bottom: 29.45;
+}
+
+.main_frame .left1 .left1-3 {
+    position: relative;
+    width: 147.84px;
+    height: 25.65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-icons {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 238px;
+    margin-top: 19px;
+}
+
+.link_href {
+    text-decoration: none;
+    color: black;
+}
+
+.icon {
+    position: relative;
+    width: 24.99px;
+    height: 22.8px;
+    border-radius: 50%;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, .25));
+}
+
+.icon1 {
+    position: relative;
+    left: 29.17%;
+    right: 27.08;
+    margin-top: 5.86px;
+}
+
+.main_frame .left_frame .marginer {
+    position: relative;
+    width: 220px;
+    height: 0px;
+    margin-left: 40px;
+    margin-bottom: 25px;
+    margin-top: 39px;
+    border: 1.5px solid #f0f0f6;
+}
+
+.main_frame .left_frame .left2 {
+    width: 221px;
+    height: 126px;
+    position: relative;
+    margin-left: 44px;
+}
+
+.info-item {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.info-label {
+    height: 24px;
+    background-color: #FFB400;
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 10px;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.info-value {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: #2B2B2B;
+    text-align: right;
+}
+
+.freelance-available {
+    color: #7EB942;
+}
+
+.main_frame .left_frame .left3 {
+    position: relative;
+    width: 220px;
+    height: 0px;
+    margin-left: 45px;
+    background-color: transparent;
+}
+
+.lang {
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-left: 45px;
+    color: #2B2B2B;
+}
+
+.language-list {
+    padding: 0;
+    margin: 0 45px;
+    width: 220px;
+}
+
+.language-item {
+    margin-bottom: 20px;
+}
+
+.language-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.language-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #767676;
+}
+
+.language-percent {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #767676;
+    text-align: right;
+}
+
+.progress-container {
+    width: 100%;
+    height: 4px;
+    background-color: #F0F0F6;
+    border-radius: 0;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    border-radius: 0;
+    background-color: #FFB400;
+    position: relative;
+    box-shadow: none;
+}
+
+.main_frame .left_frame .left4 {
+    position: relative;
+    width: 220px;
+    height: auto;
+    margin-top: 0;
+    margin-left: 45px;
+    background-color: transparent;
+}
+
+.skills-title {
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #2B2B2B;
+}
+
+.skills-list {
+    padding: 0;
+    margin: 0;
+    width: 220px;
+}
+
+.skill-item {
+    margin-bottom: 20px;
+}
+
+.skill-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.skill-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #767676;
+}
+
+.skill-percent {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #767676;
+    text-align: right;
+}
+
+.skill-progress-container {
+    width: 100%;
+    height: 4px;
+    background-color: #F0F0F6;
+    border-radius: 0;
+    position: relative;
+}
+
+.skill-progress-bar {
+    height: 100%;
+    border-radius: 0;
+    background-color: #FFB400;
+    position: relative;
+    box-shadow: none;
+}
+
+.main_frame .left_frame .left5 {
+    position: relative;
+    width: 220px;
+    height: auto;
+    margin-top: 0;
+    margin-left: 45px;
+    background-color: transparent;
+}
+
+.extra-skills-title {
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #2B2B2B;
+}
+
+.extra-skills-list {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.extra-skill-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.skill-icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.extra-skill-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #767676;
+    line-height: 1.5;
+}
+
+/*
+ <!-- MID_FRAME STYLES
+*/
+
+.main_frame .mid_frame {
+    position: relative;
+    width: 1050px;
+    height: 1400px;
+    margin-left: 30px;
+    margin-right: 27px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.mid_frame_content {
+    position: relative;
+    width: 100%;
+    height: auto; /* Changed from 100% to auto to accommodate all content */
+    padding: 20px 20px 40px; /* Added bottom padding to ensure visibility */
+    overflow: visible; /* Changed from hidden to visible */
+}
+
+/* Decorative Elements */
+.decorative_elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.yellow_circle {
+    width: 16px;
+    height: 16px;
+    background-color: #FFB400;
+    top: 48px;
+    left: 42px;
+}
+
+.green_circle {
+    width: 16px;
+    height: 16px;
+    background-color: rgba(32, 249, 3, 0.333);
+    top: 66px;
+    right: 132px;
+}
+
+.square {
+    position: absolute;
+    transform: rotate(45deg);
+}
+
+.yellow_square {
+    width: 18px;
+    height: 18px;
+    background-color: #FFB400;
+    top: 85px;
+    right: 48px;
+}
+
+.triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.orange_triangle {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 18px solid #FF6464;
+    right: 30px;
+    bottom: 430px;
+}
+
+.yellow_circle_bottom {
+    width: 16px;
+    height: 16px;
+    background-color: #FFB400;
+    bottom: 390px;
+    left: 560px;
+}
+
+.green_circle_small {
+    width: 16px;
+    height: 16px;
+    background-color: rgba(32, 249, 3, 0.333);
+    bottom: 350px;
+    left: 92px;
+}
+
+/* Hero Section / Main Menu */
+.hero_section {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 80px;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.hero_text {
+    width: 55%; /* Slightly reduced to give more space for the image */
+}
+
+.hero_title {
+    font-family: 'Inter', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #2B2B2B;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.hero_subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #2B2B2B;
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+}
+
+.hero_description {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #767676;
+    margin-bottom: 35px;
+    max-width: 90%;
+}
+
+.hire_me_btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFB400;
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 15px 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.arrow_icon {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.hero_image {
+    width: 45%; /* Increased width to accommodate the full image */
+    display: flex;
+    justify-content: center; /* Changed from flex-end to center */
+    align-items: center;
+    padding-right: 30px; /* Added padding to ensure image isn't cut off */
+}
+
+.profile_large {
+    width: 325px;
+    height: auto;
+    max-width: 100%; /* Ensure image doesn't overflow its container */
+}
+
+/* My Services Section */
+.my_services {
+    position: relative;
+    margin-top: 50px; /* Reduced from 150px to 50px */
+    padding: 0 20px;
+    z-index: 1;
+}
+
+.services_title {
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #2B2B2B;
+    text-align: center;
+    margin: 0 0 15px 0;
+}
+
+.services_description {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #767676;
+    text-align: center;
+    max-width: 60%;
+    margin: 0 auto 50px auto;
+    line-height: 1.7;
+}
+
+.services_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Increased from 2px to 20px for better spacing */
+    margin-top: 40px;
+}
+
+.service_card {
+    background-color: white;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #F0F0F6;
+    height: 200px; /* Reduced from 225px to 200px */
+}
+
+.service_card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #FFB400;
+}
+
+.service_icon_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px; /* Reduced from 25px to 20px */
+}
+
+.service_icon {
+    width: 68px;
+    height: 68px;
+    object-fit: contain;
+}
+
+.service_name {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #2B2B2B;
+    margin: 0 0 15px 0;
+}
+
+.service_details {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #767676;
+    margin: 0;
+}
+
+/* Advertising Card Special Styling */
+.advertising_card {
+    text-align: left;
+    padding: 30px 20px; /* Adjusted from 40px 30px to match other cards */
+}
+
+.advertising_card .service_name {
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 15px; /* Reduced from 20px to 15px */
+}
+
+.advertising_card .service_details {
+    text-align: left;
+    line-height: 1.7;
+    margin-bottom: 15px; /* Reduced from 20px to 15px */
+}
+
+.order_now_btn {
+    display: inline-flex;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #FFB400;
+    text-decoration: none;
+}
+
+.order_now_icon {
+    margin-left: 5px;
+    font-size: 16px;
+}
+
+/*
+MID_FRAME STYLES -->
+*/
+
+/* RIGHT_FRAME STYLES */
+
+.main_frame .right_frame {
+    position: relative;
+    width: 108px;
+    height: 1400px; /* Updated to match the height of left_frame */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+
+/* Dark Mode Toggle */
+.mode_toggle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #F0F0F6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.theme_toggle_icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Navigation Menu */
+.right_nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.nav_item_container {
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav_item {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #F0F0F6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav_icon {
+    width: 20px;
+    height: 20px;
+    opacity: 0.6;
+}
+
+/* Active state for home button */
+.nav_item_container.active .nav_item {
+    background-color: #FFB400;
+}
+
+.nav_item_container.active .nav_icon {
+    opacity: 1;
+}
+
+/* Tooltip styles */
+.tooltip {
+    position: absolute;
+    background-color: #2B2B2B;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px 6px 0 6px;
+    border-style: solid;
+    border-color: #2B2B2B transparent transparent transparent;
+}
+
+.nav_item_container:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Special styling for home nav */
+.home_nav {
+    position: relative;
+}
+
+/* - RIGHT_FRAME STYLES */
