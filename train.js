@@ -14,7 +14,8 @@ function countLetter(letter, word) {
             count++;
         };
     };
-    console.log(count);
+    console.log(`"${letter}" appears ${count} times in "${word}"`);
+    console.log("Easy-peasy! haha •̀ᴗ•́");
     return count;
 };
 
