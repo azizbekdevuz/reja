@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "../Node/.qodo"
+		},
+		{
+			"path": "../Node/node_modules"
+		}
+	]
+}

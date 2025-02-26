@@ -28,17 +28,14 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 // 4. Routing
-app.get("/", function(req, res) {
-    res.end("Hello Word");
+app.get("/", (req, res) => {
+    res.render("reja");
 });
 app.get("/hello", function(req, res) {
     res.end("Hello Word from /hello page");
 });
 app.get("/gift", function(req, res) {
     res.end(`You are now on the gifts page`);
-});
-app.get("/harid", (req, res) => {
-    res.render("harid");
 });
 app.post("/create-item", (req, res) => {
     console.log(req.body);
@@ -59,5 +56,5 @@ app.get('/author', (req, res) => {
 const server = http.createServer(app);
 let PORT = 3000;
 server.listen(PORT, function() {
-    console.log(`The server is running successfully on port: ${PORT}`);
+    console.log(`The server is running successfully on port: ${PORT}, http://localhost:${PORT}`);
 });

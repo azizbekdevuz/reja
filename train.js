@@ -1,25 +1,60 @@
 console.log("MIT25 | LEO [Azizbek]");
 console.log("Train server run success!");
 
+// B-Task
+/* Shunday function tuzing, u 1 ta string parametrga ega bo'lsin, hamda o'sha stringda qatnashgan raqamlarni sonini bizga return qilsin.
+MASALAN, countDigits("ad2a54y79wet0sfgb9") 7 ni return qiladi.
+*/
+
+//Masalani yechimi
+function countDigits(word) {
+    let count = 0;
+    let digits = [];
+    if (typeof word !== "string") {
+        console.log("Only strings are supported in this 'Masala'");
+        return null;
+    }
+    else if (typeof word === "string") {
+        for (let i = 0; i < word.length; i++) {
+            if (word[i] >= '0' && word[i] <= '9') {
+                count++;
+                digits.push(word[i]);
+            };
+        };
+        console.log(`Number of digits in '${word}' - ${count}`);
+        console.log("~ ~ ~ | ~ ~ ~");
+        console.log("Digits extracted from the list below:");
+        console.log(digits);
+        console.log("~ ~ ~ | ~ ~ ~");
+        console.log("MASALA (Task-B) solved success!!!!!");
+        return count;
+    };    
+};
+
+countDigits("ad2a54y79wet0sfgb9");
+
+
+
+
 //A-Task
 /* 2 parametrli function tuzing: 1- parametrdagi letterlarni 2 parametrdagi so'zda qatnashgan sonini return qilsin.
 Masalan, countLetter("e", "engineer") 3 ni return qiladi.
 */
 
 //Masalani yechimi
-function countLetter(letter, word) {
-    let count = 0;
-    for(let i = 0; i < word.length; i++){
-        if(word[i] === letter) {
-            count++;
-        };
-    };
-    console.log(`"${letter}" appears ${count} times in "${word}"`);
-    console.log("Easy-peasy! haha •̀ᴗ•́");
-    return count;
-};
+// function countLetter(letter, word) {
+//     let count = 0;
+//     for(let i = 0; i < word.length; i++){
+//         if(word[i] === letter) {
+//             count++;
+//         };
+//     };
+//     console.log(`"${letter}" appears ${count} times in "${word}"`);
+//     console.log("Easy-peasy! haha •̀ᴗ•́");
+//     return count;
+// };
 
-countLetter("a", "internatsionalizatsiyalashtirolmayotganliklaringizdandirmikina");
+// countLetter("a", "internatsionalizatsiyalashtirolmayotganliklaringizdandirmikina");
 
 
 
