@@ -6,6 +6,7 @@ const app = express();
 
 // MongoDB connect
 const { db } = require("./server");
+const mongodb = require("mongodb");
 
 // 1 Kirish code
 app.use(express.static("public")); // MiddleWare DP  // permission to public folder
@@ -39,6 +40,14 @@ app.post("/create-item", function (req, res) {
         console.log(data.ops);
         res.json(data.ops[0]);
 });});
+
+app.post("/delete-item", (req, res) => {
+    const id = req.body.id;
+    db.collection("plans").deleteOne({_id: new mongodb.ObjectId(id)}, function(err, data) {
+        res.json({state: "success"});
+    });
+
+});
 
 app.get("/author", (req, res) => {
     res.render("author", { user });

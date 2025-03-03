@@ -31,3 +31,27 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
             console.log(err);
         });
 });
+
+// document.addEventListener("click", function(e) {
+//     console.log(e);
+// });
+
+document.addEventListener("click", function(e) {
+    //delete
+    if (e.target.classList.contains("delete-me") ){
+        if(confirm("Are you sure?")) {
+            axios.post("/delete-item", {id: e.target.getAttribute("data-id")})
+            .then((response) => {
+                console.log(response.data);
+                e.target.parentElement.parentElement.remove();
+            })
+            .catch((err) => {
+                console.log("Please try again");
+            });
+        }
+    };
+    //edit
+    if (e.target.classList.contains("edit-me") ){
+        alert("You clicked on edit");
+    };
+});
