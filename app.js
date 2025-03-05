@@ -1,9 +1,6 @@
 const express = require("express");
 const app = express();
 
-// const fs = require("fs");
-
-
 // MongoDB connect
 const { db } = require("./server");
 const mongodb = require("mongodb");
