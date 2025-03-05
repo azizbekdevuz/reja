@@ -52,6 +52,31 @@ document.addEventListener("click", function(e) {
     };
     //edit
     if (e.target.classList.contains("edit-me") ){
-        alert("You clicked on edit");
+        let userInput = prompt("Please enter new name", e.target.parentElement.parentElement.querySelector(".item-text").innerHTML);
+        if(userInput) {
+            axios
+            .post("edit-item", {
+                id: e.target.getAttribute("data-id"),
+                new_input: userInput,
+            })
+            .then(response => {
+                console.log(response);
+                e.target.parentElement.parentElement.querySelector(
+                    ".item-text"
+                ).innerHTML = userInput;
+            })
+            .catch(err => {
+                console.log("Unexpected error. Please try again", err);
+            })
+        }
     };
+});
+
+document.getElementById("clean-all").addEventListener("click", function() {
+    axios
+        .post("/delete-all", {delete_all: true})
+        .then(response => {
+            alert(response.data.state);
+            document.location.reload();
+        });
 });
