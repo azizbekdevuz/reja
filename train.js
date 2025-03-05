@@ -1,70 +1,100 @@
 console.log("MIT25 | LEO [Azizbek]");
 console.log("Train server run success!");
 
-// C-Task
+// D-Task
 /*
-Shunday class tuzing tuzing nomi Shop, va uni constructoriga 3 hil mahsulot pass bolsin, hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul. Har bir method ishga tushgan vaqt ham log qilinsin.
-MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq() return hozir 20:40da 4ta non, 5ta lagmon va 2ta cola mavjud! shop.sotish('non', 3) & shop.qabul('cola', 4) & shop.qoldiq() return hozir 20:50da 1ta non, 5ta lagmon va 6ta cola mavjud!
+Shunday function tuzing, u 2ta string parametrga ega bo'lsin, hamda agar har ikkala string bir xil harflardan iborat bo'lsa, true. Aks holda false qaytarsin.
+MASALAN, checkContent("mitgroup", "gmtiprou") return qiladi true;
 */
 
 //Masalani yechimi
-class Shop {
-    constructor(non, lagmon, cola) {
-      //Dastlabki mahsulotlar
-      this.non = non;
-      this.lagmon = lagmon;
-      this.cola = cola;
-    }
-  
-    //Hozirgi vaqt - HH:MM uchun metod
-    getTime() {
-      const now = new Date();
-      const hours = String(now.getHours()).padStart(2, '0'); // Soatni olamiz> agar 1 xonali bo‘lsa> oldiga 0 qo‘shamiz (ushbu functionlar JSda built in bor ekan!!)
-      const minutes = String(now.getMinutes()).padStart(2, '0'); // Daqiqalarni olamiz> agar 1 xonali bo‘lsa> oldiga 0 qo‘shamiz (bu ham JS da built in bor!!)
-      return `${hours}:${minutes}`;
-    }
-  
-    //Omborda qancha mahsulot borligini aytuvchi metod
-    qoldiq() {
-      const time = this.getTime(); //Hozirgi vaqt
-      return `Hozir ${time}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud!`;
-    }
-  
-    //Mahsulot sotish uchun function
-    sotish(mahsulot, soni) {
-      //Agar mahsulot mavjud bo'lsa va yetarli soni bo‘lsa sotamiz
-      if (this[mahsulot] !== undefined) {
-        if (this[mahsulot] >= soni) {
-          this[mahsulot] -= soni; //Ombordan remove qilamiz, chunki sotildi
-          console.log(`Hozir ${this.getTime()}da ${soni}ta ${mahsulot} sotildi.`);
-        } else {
-          console.log(`Hozir ${this.getTime()}da yetarli ${mahsulot} yo‘q!`); //Mahsulot yetmasa
-        }
-      } else {
-        console.log(`Hozir ${this.getTime()}da bunday mahsulot mavjud emas!`); //Nomi noto'g'ri kiritilsa
-      }
-    }
-  
-    //Omborga yangi mahsulot olish uchun function
-    qabul(mahsulot, soni) {
-      //Agar mahsulot ro‘yxatda bo‘lsa, unga sonini qo'shamiz
-      if (this[mahsulot] !== undefined) {
-        this[mahsulot] += soni; //Omborga add qilamiz bu safar
-        console.log(`Hozir ${this.getTime()}da ${soni}ta ${mahsulot} qabul qilindi.`);
-      } else {
-        console.log(`Hozir ${this.getTime()}da bunday mahsulot mavjud emas!`); //Nomi noto'g'ri kiritilsa
-      }
-    }
+function checkContent(str1, str2) { //ikki parametr
+  if (typeof str1 !== "string" || typeof str2 !== "string") { //error chiqaramiz, agar call qilganda string bo'lmasa 
+    console.log("Please enter string only!");
   }
+  else { //agar ikkala argument ham string bo'lsagina function ishga tushadi
+    const sort1 = str1.split('').sort().join(); //sort1 variableda 1-stringni ushbu built in JS methodlar orqali saqlaymiz
+    const sort2 = str2.split('').sort().join(); //xuddi sort1dagidek qaytaramiz
+    if (sort1 == sort2) { //endi ikkalasini tekshiramiz: bir xil bo'lsa:
+      console.log("true");
+      return true; //true
+    }
+    else { //bo'lmasa, false
+      console.log("false");
+      return false; //false
+    };
+  };
+};
+
+checkContent("mitgroup", "gmtiprou"); //function call qismi
+
+
+
+
+// C-Task
+/*
+Shunday classtuzing nomi Shop, va uni constructoriga 3 hil mahsulot pass bo'lsin, hamda classning 3ta methodi bo'lsin, biri qoldiq, biri sotish va biri qabul. Har bir method ishga tushgan vaqt ham log qilinsin.
+MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq() return hozir 20:40da 4ta non, 5ta lag'mon va 2ta cola mavjud! shop.sotish('non', 3) & shop.qabul('cola', 4) & shop.qoldiq() return hozir 20:50da 1ta non, 5ta lag'mon va 6ta cola mavjud!
+*/
+
+//Masalani yechimi
+// class Shop {
+//     constructor(non, lagmon, cola) {
+//       //Dastlabki mahsulotlar
+//       this.non = non;
+//       this.lagmon = lagmon;
+//       this.cola = cola;
+//     }
   
-  //Masala yechimini ishlatish
-  const shop = new Shop(4, 5, 2); //4ta non, 5ta lag'mon, 2ta cola
-  console.log(shop.qoldiq()); //Omborda qancha mahsulot borligini ko'ramiz
+//     //Hozirgi vaqt - HH:MM uchun metod
+//     getTime() {
+//       const now = new Date();
+//       const hours = String(now.getHours()).padStart(2, '0'); // Soatni olamiz> agar 1 xonali bo‘lsa> oldiga 0 qo‘shamiz (ushbu functionlar JSda built in bor ekan!!)
+//       const minutes = String(now.getMinutes()).padStart(2, '0'); // Daqiqalarni olamiz> agar 1 xonali bo‘lsa> oldiga 0 qo‘shamiz (bu ham JS da built in bor!!)
+//       return `${hours}:${minutes}`;
+//     }
   
-  shop.sotish('non', 3); //3ta non sotish
-  shop.qabul('cola', 4); //4ta cola qabul
+//     //Omborda qancha mahsulot borligini aytuvchi metod
+//     qoldiq() {
+//       const time = this.getTime(); //Hozirgi vaqt
+//       return `Hozir ${time}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud!`;
+//     }
   
-  console.log(shop.qoldiq()); //Yana qoldiqni tekshiramiz  
+//     //Mahsulot sotish uchun function
+//     sotish(mahsulot, soni) {
+//       //Agar mahsulot mavjud bo'lsa va yetarli soni bo‘lsa sotamiz
+//       if (this[mahsulot] !== undefined) {
+//         if (this[mahsulot] >= soni) {
+//           this[mahsulot] -= soni; //Ombordan remove qilamiz, chunki sotildi
+//           console.log(`Hozir ${this.getTime()}da ${soni}ta ${mahsulot} sotildi.`);
+//         } else {
+//           console.log(`Hozir ${this.getTime()}da yetarli ${mahsulot} yo‘q!`); //Mahsulot yetmasa
+//         }
+//       } else {
+//         console.log(`Hozir ${this.getTime()}da bunday mahsulot mavjud emas!`); //Nomi noto'g'ri kiritilsa
+//       }
+//     }
+  
+//     //Omborga yangi mahsulot olish uchun function
+//     qabul(mahsulot, soni) {
+//       //Agar mahsulot ro‘yxatda bo‘lsa, unga sonini qo'shamiz
+//       if (this[mahsulot] !== undefined) {
+//         this[mahsulot] += soni; //Omborga add qilamiz bu safar
+//         console.log(`Hozir ${this.getTime()}da ${soni}ta ${mahsulot} qabul qilindi.`);
+//       } else {
+//         console.log(`Hozir ${this.getTime()}da bunday mahsulot mavjud emas!`); //Nomi noto'g'ri kiritilsa
+//       }
+//     }
+//   }
+  
+//   //Masala yechimini ishlatish
+//   const shop = new Shop(4, 5, 2); //4ta non, 5ta lag'mon, 2ta cola
+//   console.log(shop.qoldiq()); //Omborda qancha mahsulot borligini ko'ramiz
+  
+//   shop.sotish('non', 3); //3ta non sotish
+//   shop.qabul('cola', 4); //4ta cola qabul
+  
+//   console.log(shop.qoldiq()); //Yana qoldiqni tekshiramiz  
 
 
 
