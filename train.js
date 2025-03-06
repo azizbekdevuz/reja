@@ -8,28 +8,28 @@ MASALAN, checkContent("mitgroup", "gmtiprou") return qiladi true;
 */
 
 //Masalani yechimi
-function checkContent(str1, str2) { //ikki parametr
-  if (typeof str1 !== "string" || typeof str2 !== "string") { //error chiqaramiz, agar call qilganda string bo'lmasa 
+function checkContent(str1, str2) {
+  //ikki parametr
+  if (typeof str1 !== "string" || typeof str2 !== "string") {
+    //error chiqaramiz, agar call qilganda string bo'lmasa
     console.log("Please enter string only!");
-  }
-  else { //agar ikkala argument ham string bo'lsagina function ishga tushadi
-    const sort1 = str1.split('').sort().join(); //sort1 variableda 1-stringni ushbu built in JS methodlar orqali saqlaymiz
-    const sort2 = str2.split('').sort().join(); //xuddi sort1dagidek qaytaramiz
-    if (sort1 == sort2) { //endi ikkalasini tekshiramiz: bir xil bo'lsa:
+  } else {
+    //agar ikkala argument ham string bo'lsagina function ishga tushadi
+    const sort1 = str1.split("").sort().join(); //sort1 variableda 1-stringni ushbu built in JS methodlar orqali saqlaymiz
+    const sort2 = str2.split("").sort().join(); //xuddi sort1dagidek qaytaramiz
+    if (sort1 == sort2) {
+      //endi ikkalasini tekshiramiz: bir xil bo'lsa:
       console.log("true");
       return true; //true
-    }
-    else { //bo'lmasa, false
+    } else {
+      //bo'lmasa, false
       console.log("false");
       return false; //false
-    };
-  };
-};
+    }
+  }
+}
 
 checkContent("mitgroup", "gmtiprou"); //function call qismi
-
-
-
 
 // C-Task
 /*
@@ -45,7 +45,7 @@ MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq() return hozir 20:40da 4ta 
 //       this.lagmon = lagmon;
 //       this.cola = cola;
 //     }
-  
+
 //     //Hozirgi vaqt - HH:MM uchun metod
 //     getTime() {
 //       const now = new Date();
@@ -53,13 +53,13 @@ MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq() return hozir 20:40da 4ta 
 //       const minutes = String(now.getMinutes()).padStart(2, '0'); // Daqiqalarni olamiz> agar 1 xonali bo‘lsa> oldiga 0 qo‘shamiz (bu ham JS da built in bor!!)
 //       return `${hours}:${minutes}`;
 //     }
-  
+
 //     //Omborda qancha mahsulot borligini aytuvchi metod
 //     qoldiq() {
 //       const time = this.getTime(); //Hozirgi vaqt
 //       return `Hozir ${time}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud!`;
 //     }
-  
+
 //     //Mahsulot sotish uchun function
 //     sotish(mahsulot, soni) {
 //       //Agar mahsulot mavjud bo'lsa va yetarli soni bo‘lsa sotamiz
@@ -74,7 +74,7 @@ MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq() return hozir 20:40da 4ta 
 //         console.log(`Hozir ${this.getTime()}da bunday mahsulot mavjud emas!`); //Nomi noto'g'ri kiritilsa
 //       }
 //     }
-  
+
 //     //Omborga yangi mahsulot olish uchun function
 //     qabul(mahsulot, soni) {
 //       //Agar mahsulot ro‘yxatda bo‘lsa, unga sonini qo'shamiz
@@ -86,18 +86,15 @@ MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq() return hozir 20:40da 4ta 
 //       }
 //     }
 //   }
-  
+
 //   //Masala yechimini ishlatish
 //   const shop = new Shop(4, 5, 2); //4ta non, 5ta lag'mon, 2ta cola
 //   console.log(shop.qoldiq()); //Omborda qancha mahsulot borligini ko'ramiz
-  
+
 //   shop.sotish('non', 3); //3ta non sotish
 //   shop.qabul('cola', 4); //4ta cola qabul
-  
-//   console.log(shop.qoldiq()); //Yana qoldiqni tekshiramiz  
 
-
-
+//   console.log(shop.qoldiq()); //Yana qoldiqni tekshiramiz
 
 // B-Task
 /* Shunday function tuzing, u 1 ta string parametrga ega bo'lsin, hamda o'sha stringda qatnashgan raqamlarni sonini bizga return qilsin.
@@ -126,13 +123,10 @@ MASALAN, countDigits("ad2a54y79wet0sfgb9") 7 ni return qiladi.
 //         console.log("~ ~ ~ | ~ ~ ~");
 //         console.log("MASALA (Task-B) solved success!!!!!");
 //         return count;
-//     };    
+//     };
 // };
 
 // countDigits("ad2a54y79wet0sfgb9");
-
-
-
 
 //A-Task
 /* 2 parametrli function tuzing: 1- parametrdagi letterlarni 2 parametrdagi so'zda qatnashgan sonini return qilsin.
@@ -153,14 +147,6 @@ Masalan, countLetter("e", "engineer") 3 ni return qiladi.
 // };
 
 // countLetter("a", "internatsionalizatsiyalashtirolmayotganliklaringizdandirmikina");
-
-
-
-
-
-
-
-
 
 // console.log("Jack Ma maslahatlari");
 
@@ -194,22 +180,6 @@ Masalan, countLetter("e", "engineer") 3 ni return qiladi.
 //     console.log('javob:', data);
 // });
 // console.log('passed here 1');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // ASYNC fuction
 // async function advice(a) {
