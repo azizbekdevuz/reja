@@ -17,8 +17,8 @@ client
     const app = require("./app");
     const http = require("http");
     const server = http.createServer(app);
-    let PORT = 3000;
-    server.listen(PORT, () => {
+    let PORT = 5007;
+    server.listen(PORT, '0.0.0.0', () => {
       console.log(`Server running at http://localhost:${PORT}`);
     });
   })

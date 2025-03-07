@@ -1,5 +1,32 @@
 console.log("MIT25 | LEO [Azizbek]");
 console.log("Train server run success!");
+console.log("");
+console.log("~~~ ~~~ ~~~");
+console.log("");
+
+// E-Task
+/*
+Shunday function tuzing, u bitta string argumentni qabul qilib, o'sha stringni teskari qilib return qilsin.
+MASALAN: getReverse("hello") return qilsin "olleh"
+*/
+
+//Masalani yechimi
+function getReverse(word) { //getReverse function word parametr bilan
+  if (typeof word !== "string") { //agar argument string bo'lmasa,
+    console.log("Please enter only string!"); //function ishga tushmaydi
+  }
+  else if (typeof word === "string") { //agar string bo'lsa,
+    return word.split("").reverse().join(""); //return qilamiz ---> word: split(arrayga aylantiramiz) -> reverse(teskari taxlaymiz elementlarni) -> join(yana stringga o'tqazamiz)
+  };
+};
+
+console.log(getReverse("itpayalhsi noitcnuf"));
+console.log(getReverse("agimsiq tnemugra llac ,ikahcnuhs"));
+console.log(getReverse("naglizoy ahcigilappahc ralz'os ubhsu"));
+console.log(getReverse("ahahah"));
+
+
+
 
 // D-Task
 /*
@@ -8,28 +35,28 @@ MASALAN, checkContent("mitgroup", "gmtiprou") return qiladi true;
 */
 
 //Masalani yechimi
-function checkContent(str1, str2) {
-  //ikki parametr
-  if (typeof str1 !== "string" || typeof str2 !== "string") {
-    //error chiqaramiz, agar call qilganda string bo'lmasa
-    console.log("Please enter string only!");
-  } else {
-    //agar ikkala argument ham string bo'lsagina function ishga tushadi
-    const sort1 = str1.split("").sort().join(); //sort1 variableda 1-stringni ushbu built in JS methodlar orqali saqlaymiz
-    const sort2 = str2.split("").sort().join(); //xuddi sort1dagidek qaytaramiz
-    if (sort1 == sort2) {
-      //endi ikkalasini tekshiramiz: bir xil bo'lsa:
-      console.log("true");
-      return true; //true
-    } else {
-      //bo'lmasa, false
-      console.log("false");
-      return false; //false
-    }
-  }
-}
+// function checkContent(str1, str2) {
+//   //ikki parametr
+//   if (typeof str1 !== "string" || typeof str2 !== "string") {
+//     //error chiqaramiz, agar call qilganda string bo'lmasa
+//     console.log("Please enter string only!");
+//   } else {
+//     //agar ikkala argument ham string bo'lsagina function ishga tushadi
+//     const sort1 = str1.split("").sort().join(); //sort1 variableda 1-stringni ushbu built in JS methodlar orqali saqlaymiz
+//     const sort2 = str2.split("").sort().join(); //xuddi sort1dagidek qaytaramiz
+//     if (sort1 == sort2) {
+//       //endi ikkalasini tekshiramiz: bir xil bo'lsa:
+//       console.log("true");
+//       return true; //true
+//     } else {
+//       //bo'lmasa, false
+//       console.log("false");
+//       return false; //false
+//     }
+//   }
+// }
 
-checkContent("mitgroup", "gmtiprou"); //function call qismi
+// checkContent("mitgroup", "gmtiprou"); //function call qismi
 
 // C-Task
 /*
