@@ -17,26 +17,42 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 // 4: Routing code
-app.get("/", function (req, res) {
-  db.collection("plans")
-    .find()
-    .toArray((err, data) => {
-      if (err) {
-        console.log(err);
-        res.end("error db!");
-      } else {
-        res.render("reja", { items: data });
-      }
-    });
+app.get("/", async (req, res) => { 
+  try {
+    const documents = await db.collection("plans").find({}).toArray();
+
+    const items = documents.map(doc => ({
+      reja: doc.reja,  
+      timestamps: doc._id ? new Date(doc._id.getTimestamp()).toLocaleString("en-US", { //adding timestamps
+          weekday: "short", 
+          year: "numeric", 
+          month: "short", 
+          day: "numeric", 
+          hour: "2-digit", 
+          minute: "2-digit",
+          second: "2-digit",
+      }) : "No timestamp",  //format the date properly
+      _id: doc._id 
+    }));
+
+    res.render("reja", { items }); 
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    res.status(500).send("Error loading page");
+  }
 });
 
 app.post("/create-item", function (req, res) {
-  console.log(req.body);
-  const new_reja = req.body.reja;
-  db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
-    console.log(data.ops);
-    res.json(data.ops[0]);
-  });
+  db.collection("plans").insertOne(
+    { reja: req.body.reja, createdAt: new Date() },
+    (err, data) => {
+      res.json({
+        reja: data.ops[0].reja,
+        timestamps: data.ops[0]._id.getTimestamp(), //includes timestamps
+        _id: data.ops[0]._id,
+      });
+    }
+  );
 });
 
 app.post("/delete-item", (req, res) => {

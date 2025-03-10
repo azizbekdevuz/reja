@@ -145,6 +145,50 @@ body {
   font-size: 1.05rem;
 }
 
+/* Timestamp Styling for a Modern UI */
+.item-date {
+  font-size: 0.54rem;  /* Smaller than main text */
+  color: rgba(75, 85, 99, 0.7); /* Subtle text color */
+  font-weight: 500;
+  display: block; /* Makes it appear below the main text */
+  margin-top: 1.3px; /* Adds a small gap for a natural look */
+  text-align: right;
+  align-items: flex-end;
+}
+
+/* Hover Effect to Make Date More Visible */
+.list-group-item:hover .item-date {
+  color: rgba(75, 85, 99, 1); /* Darker text when hovered */
+  transition: color 0.3s ease-in-out;
+}
+
+/* Animated Fade-In for New Items */
+.item-date {
+  opacity: 0;
+  transform: translateY(5px);
+  animation: fadeInDate 0.3s ease-out forwards;
+}
+
+@keyframes fadeInDate {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustment for Mobile */
+@media (max-width: 768px) {
+  .item-date {
+    font-size: 0.5rem;
+    text-align: right;
+    margin-top: 1px;
+  }
+}
+
 .btn-secondary {
   background: #9ca3af;
   color: white;

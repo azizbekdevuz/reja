@@ -25,7 +25,6 @@
             </div>
         </form>
 
-
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <ul id="item-list" class="list-group pb-5">
@@ -34,6 +33,9 @@
                             class="list-group-item list-group-item-info d-flex align-items-center justify-content-between">
                             <span class="item-text">
                                 <%= item.reja %>
+                            </span>
+                            <span class="item-date">
+                                <%= item.timestamps %>
                             </span>
                             <div>
                                 <button data-id="<%= item._id %>"
@@ -54,8 +56,6 @@
             </div>
         </div>
     </div>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="/browser.js"></script>
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">
@@ -88,6 +88,8 @@
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/browser.js"></script>
 </body>
 
 </html>

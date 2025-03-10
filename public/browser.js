@@ -6,6 +6,9 @@ function itemTemplate(item) {
                             <span class="item-text">
                                 ${item.reja}
                             </span>
+                            <span class="item-date">
+                                ${item.timestamps ? item.timestamps : "No timestamp"}
+                            </span>
                             <div>
                                 <button data-id="${item._id}"
                                     class="edit-me btn btn-secondary btn-sm mr-1">O'zgartirish</button>
