@@ -4,6 +4,41 @@ console.log("");
 console.log("~~~ ~~~ ~~~");
 console.log("");
 
+// F-Task
+/*
+Yagona string argumentga ega findDoublers nomli function tuzing.
+Agar stringda bittadan ortiq bir xil harflar ishtirok etgan bo'lsa,
+true yokida false natija qaytarsin.
+
+MASALAN: findDoublers("hello"); natija true qaytadi. Sababi ikki marotaba takrorlangan 'll' harfi mavjud!
+*/
+
+//Masalani yechimi
+function findDoublers(word) {
+  if (typeof word !== "string") { //agar argument string bo'lmasa,
+    console.log("Please enter only string!"); //function ishga tushmaydi
+  }
+  else if (typeof word === "string") { //agar string bo'lsa,
+    const save = new Set();  //Set built-in JS objecti bo'lib, unda pastdagi logiclarda valuelarni saqlaymiz
+    for (let i = 0; i < word.length; i++) { //for loop bilan har bir element ustida loop qilamiz
+      if (save.has(word[i])) { //has() - Set documentationidan olindi!!!
+        console.log(`${word}`); //kiritilgan so'z
+        console.log(`Takroriy qiymat: ${word[i]}`); //takroriy qiymat bergan value
+        return true; //bizda takroriy qiymat bor, TRUE !!!
+      }
+      save.add(word[i]); //add() - Set documentationdan olindi!!! qiymat Setda bo'lmaganda uni Setga qo'shamiz.
+    }
+  }
+  console.log(`${word}`); //kiritilgan so'z (false holatida)
+  return false; //agar loopimiz takroriy qiymat qaytarmasa, return FALSE !
+};
+
+console.log(findDoublers("test1"));
+console.log(findDoublers("sinov2"));
+
+
+
+
 // E-Task
 /*
 Shunday function tuzing, u bitta string argumentni qabul qilib, o'sha stringni teskari qilib return qilsin.
@@ -11,19 +46,19 @@ MASALAN: getReverse("hello") return qilsin "olleh"
 */
 
 //Masalani yechimi
-function getReverse(word) { //getReverse function word parametr bilan
-  if (typeof word !== "string") { //agar argument string bo'lmasa,
-    console.log("Please enter only string!"); //function ishga tushmaydi
-  }
-  else if (typeof word === "string") { //agar string bo'lsa,
-    return word.split("").reverse().join(""); //return qilamiz ---> word: split(arrayga aylantiramiz) -> reverse(teskari taxlaymiz elementlarni) -> join(yana stringga o'tqazamiz)
-  };
-};
+// function getReverse(word) { //getReverse function word parametr bilan
+//   if (typeof word !== "string") { //agar argument string bo'lmasa,
+//     console.log("Please enter only string!"); //function ishga tushmaydi
+//   }
+//   else if (typeof word === "string") { //agar string bo'lsa,
+//     return word.split("").reverse().join(""); //return qilamiz ---> word: split(arrayga aylantiramiz) -> reverse(teskari taxlaymiz elementlarni) -> join(yana stringga o'tqazamiz)
+//   };
+// };
 
-console.log(getReverse("itpayalhsi noitcnuf"));
-console.log(getReverse("agimsiq tnemugra llac ,ikahcnuhs"));
-console.log(getReverse("naglizoy ahcigilappahc ralz'os ubhsu"));
-console.log(getReverse("ahahah"));
+// console.log(getReverse("itpayalhsi noitcnuf"));
+// console.log(getReverse("agimsiq tnemugra llac ,ikahcnuhs"));
+// console.log(getReverse("naglizoy ahcigilappahc ralz'os ubhsu"));
+// console.log(getReverse("ahahah"));
 
 
 
